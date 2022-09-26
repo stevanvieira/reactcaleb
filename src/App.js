@@ -1,19 +1,19 @@
 import './App.css';
-
+import Employee from "./Components/Employee";
 function App() {
+  const showEmployess = true;
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello Caleb</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/*<p>This is a coment</p>*/}
+        {showEmployess ? (
+          <div>
+            <Employee name="Stevan" role="Intern"/>
+            <Employee name="Michael" role="Finance"/>
+            <Employee name="Bárbara"/>
+            <Employee name="Teresa"/>
+          </div>
+        ) : (<p>You cannot see the employess!</p>
+        )}
     </div>
   );
 }
